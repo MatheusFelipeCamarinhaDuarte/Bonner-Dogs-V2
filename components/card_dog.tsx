@@ -1,26 +1,16 @@
 import React, { version } from 'react';
 import { Image, View, Text, StyleSheet, Button, Alert } from 'react-native';
 
-import hotDog1 from '.././assets/hot-dog-1'
-import hotDog2 from '.././assets/hot-dog-2.jpg'
-import hotDog3 from '.././assets/hot-dog-3.jpg'
-import bebida1 from '.././assets/bebidas-1.jpg'
-import bebida2 from '.././assets/bebidas-2.jpg'
-import bebida3 from '.././assets/bebidas-3.jpg'
-import sobremesa1 from '.././assets/sobremesa-1.jpg'
-import sobremesa2 from '.././assets/sobremesa-2.jpg'
-import sobremesa3 from '.././assets/sobremesa-3.jpg'
-
 const images: { [key: string]: any } = {
-    '1': hotDog1,
-    '2': hotDog2,
-    '3': hotDog3,
-  '4': bebida1,
-  '5': bebida2,
-  '6': bebida3,
-  '7': sobremesa1,
-  '8': sobremesa2,
-  '9': sobremesa3
+    '1': require('../assets/hot-dog-1.jpg'),
+    '2': require('../assets/hot-dog-2.jpg'),
+    '3': require('../assets/hot-dog-3.jpg'),
+    '4': require('../assets/bebidas-1.jpg'),
+    '5': require('../assets/bebidas-2.jpg'),
+    '6': require('../assets/bebidas-3.jpg'),
+    '7': require('../assets/sobremesa-1.jpg'),
+    '8': require('../assets/sobremesa-2.jpg'),
+    '9': require('../assets/sobremesa-3.jpg')
 };
 
 const CardDog = (props) => {
@@ -102,10 +92,10 @@ const CardDog = (props) => {
                     marginBottom: 20,
                 }}>
 
-            <Button
-                title="Adicionar ao carrinho"
-                color="#8f1414"
-                onPress={adicionarCarrinho}
+                <Button
+                    title="Adicionar ao carrinho"
+                    color="#8f1414"
+                    onPress={adicionarCarrinho}
                 />
             </View>
         </View>
